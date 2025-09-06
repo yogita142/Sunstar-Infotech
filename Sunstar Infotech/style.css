@@ -1,0 +1,465 @@
+/* ====== Global Styles ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ====== Header ====== */
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0071e3;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: #f1f1f1;
+}
+
+/* ====== Hero Section ====== */
+.hero {
+  position: relative;
+  background-image: url('https://images.pexels.com/photos/2582931/pexels-photo-2582931.jpeg'); /* Replace with your preferred image */
+  background-size: cover;        /* Makes image cover the entire section */
+  background-position: center;   /* Centers the image */
+  background-repeat: no-repeat;
+  color: #fff;                   /* White text for contrast */
+  padding: 8rem 1rem;            /* Adjust top/bottom padding */
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); /* Optional: dark overlay for better text readability */
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2; /* Puts text above overlay */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+
+/* ====== Categories Section ====== */
+.categories {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.categories h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.category {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.category h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #0071e3;
+}
+
+
+
+#about-section {
+  padding-bottom: 3rem;
+}
+
+.footer {
+  background-color: #111827;
+  color: #E5E7EB;
+  padding: 4rem 1rem 2rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section h3 {
+  color: #FBBF24; /* yellow */
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #E5E7EB;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #FBBF24;
+}
+
+.social-icons a img {
+  width: 24px;
+  margin-right: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+
+.subscribe-form button {
+  background-color: #FBBF24;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #111827;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscribe-form button:hover {
+  background-color: #F59E0B;
+}
+
+.footer-section iframe {
+  width: 100%;
+  height: 150px;
+  border: 0;
+  border-radius: 0.25rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #374151;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ===== Device Categories Section ===== */
+.device-categories {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.device-categories h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.device-categories p {
+  color: #555;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.device-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.device-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 25px 15px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
+}
+
+.device-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.device-card span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+}
+
+.device-card:hover {
+  border-color: #0071e3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+}
+
+/* About Section */
+.about-section {
+  background-color: #f9f9f9;
+  padding: 0% 1rem;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1F2937;
+  font-weight: 700;
+}
+
+#about-sunstar {
+font-size: 2.0rem;
+  color: #1F2937;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: #4B5563;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.about-section .highlight {
+  font-weight: 600;
+  color: #D97706; /* orange highlight */
+}
+
+.about-image {
+  margin-top: 2rem;
+}
+
+.about-image img {
+  width: 100%;       /* full width */
+  height: 80vh;      /* makes it cover most of the viewport height */
+  object-fit: cover; /* maintains aspect ratio, crops if necessary */
+  display: block;
+}
+
+.brands-section {
+  background-color: #f9f9f9;
+}
+
+.brands-section h2 {
+  font-size: 2.0rem;
+  color: #1F2937;
+  font-weight: bold;
+}
+
+.brands-section .lead {
+  color: #4B5563;
+  font-weight: 500;
+}
+
+.brand-logo {
+  width: 120px;       /* adjust size */
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.brand-logo:hover {
+  transform: scale(1.1); /* subtle zoom effect */
+}
+
+
+
+/* Services Section */
+.services-section {
+  background-color: #f9f9f9;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.services-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-section h2 {
+  font-size: 2rem;
+  color: #1F2937;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.services-section p {
+  font-size: 1rem;
+  color: #4B5563;
+  margin-bottom: 3rem;
+}
+
+/* Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, max-content)); /* Cards take minimum 220px, max content width */
+  justify-content: center; /* Center the grid in the container */
+  gap: 2.5rem;
+}
+
+
+/* Each Service Item */
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Box for image */
+/* Box for image */
+.image-box {
+  width: 120px;          /* Adjust width */
+  height: 120px;         /* Adjust height */
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;      /* Important to crop image to box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 1rem;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* Makes image cover the box */
+  display: block;
+}
+
+.image-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+
+/* Service content */
+.service-item h3 {
+  font-size: 1.2rem;
+  color: #1F2937;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.service-item p {
+  font-size: 0.95rem;
+  color: #4B5563;
+  line-height: 1.5;
+}
+ .navbar-brand img {
+  margin-right: 10px;   /* space between logo and text */
+  /* makes logo circular if it’s square  */
+  object-fit:fill;    /* ensures the image doesn’t stretch */
+}
+
+
+/* .img {
+  height: 100%;
+  width: auto;
+} */
